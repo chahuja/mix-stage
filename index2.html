@@ -223,7 +223,7 @@
                     if (i == 0){
                       addAudioRow(j, "audio")
                     }
-                    $("#audio-{0}".format(j)).append('<li><input type="radio" id="audio-{1}" name="audio" onclick="updateVideo(1, \'{3}\', \'{2}\')"/><label for="audio-{1}">{1}</label></li>'.format(i, j, value, style))
+                    $("#audio-{0}".format(j)).append('<li><input type="radio" id="audio-{1}{0}" name="audio" onclick="updateVideo(1, \'{3}\', \'{2}\')"/><label for="audio-{1}{0}">{1}</label></li>'.format(i, j, value, style))
                   }
                 })
               });
