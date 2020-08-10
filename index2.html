@@ -120,7 +120,7 @@
               var elem = '<ul class="donate-now" id="audio-{0}" style="min-width: 65rem; max-width: 65rem;"></ul>'.format(id)
               $('#'+parent_id).append(elem)
               // add audio name\
-              $('#audio-'+id).append('<li><p name="audio" style="text-align: center; font-size: 1.8rem;">Audio</p></li>')
+              $('#audio-'+id).append('<li><p name="audio" style="text-align: center; font-size: 1.6rem;">Audio-{0}</p></li>'.format(id))
             }
             
             function updateVideo(styleORaudio, speaker, filename) {
