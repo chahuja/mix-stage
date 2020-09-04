@@ -85,6 +85,10 @@ python train.py \
  -num_iters 3000 ## Maximum number of validation iterations per epoch
 ```
 
+Scripts for training models in the paper can be found,
+- [Mix-StAGE](jobs/mix-stage.py)
+- [StAGE](jobs/stage.py)
+
 ## Inference
 ### Inference for quantitative evaluation
 
