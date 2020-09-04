@@ -54,7 +54,7 @@ pip install -r requirements.txt
 ```
 
 ## Training
-To train a model from scratch, run the following script,
+To train a model from scratch, run the following script after chaging directory to [src](src/),
 
 ```sh
 python train.py \
