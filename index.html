@@ -15,6 +15,10 @@
     <h1 class="project-name" style="font-size: 2.4rem"> Style Transfer for Co-Speech Gesture Animation: <br>A Multi-Speaker Conditional-Mixture Approach</h1>
     <h2 class="project-tagline"><a href="http://chahuja.com">Chaitanya Ahuja</a>, Dong Won Lee, Yukiko I. Nakano, <a href="https://www.cs.cmu.edu/~morency/">Louis-Philippe Morency</a></h2>
     <h2 class="project-tagline">ECCV 2020</h2>
+    <a href="https://arxiv.org/abs/2007.12553" class="button">Paper</a> 
+    <a href="https://github.com/chahuja/mix-stage" class="button">Code</a>
+    <a href="http://chahuja.com/pats" class="button">Dataset Website</a> 
+    <a href="https://github.com/chahuja/pats" class="button">Dataset Scripts</a>
     <!-- <a href="https://github.com/chahuja/mix-stage" class="btn">View on GitHub</a>
     <a href="https://github.com/chahuja/mix-stage/zipball/master" class="btn">Download .zip</a>
     <a href="https://github.com/chahuja/mix-stage/tarball/master" class="btn">Download .tar.gz</a> -->
@@ -23,7 +27,13 @@
   <section id="main-content" class="main-content" style="max-width: 75rem; min-width: 75rem; font-size: 0.9rem; background-color: white;">
     <h1>Abstract</h1>
     How can we teach robots or virtual assistants to gesture naturally? Can we go further and adapt the gesturing style to follow a specific speaker? Gestures that are naturally timed with corresponding speech during human communication are called co-speech gestures. A key challenge, called gesture style transfer, is to learn a model that generates these gestures for a speaking agent 'A' in the gesturing style of a target speaker 'B'. A secondary goal is to simultaneously learn to generate co-speech gestures for multiple speakers while remembering what is unique about each speaker. We call this challenge style preservation. In this paper, we propose a new model, named Mix-StAGE, which trains a single model for multiple speakers while learning unique style embeddings for each speaker's gestures in an end-to-end manner. A novelty of Mix-StAGE is to learn a mixture of generative models which allows for conditioning on the unique gesture style of each speaker. As Mix-StAGE disentangles style and content of gestures, gesturing styles for the same input speech can be altered by simply switching the style embeddings. Mix-StAGE also allows for style preservation when learning simultaneously from multiple speakers. We also introduce a new dataset, Pose-Audio-Transcript-Style (PATS), designed to study gesture generation and style transfer. Our proposed Mix-StAGE model significantly outperforms the previous state-of-the-art approach for gesture generation and provides a path towards performing gesture style transfer across multiple speakers. 
-    <h2 style="color:black; text-align:center"><a href="https://arxiv.org/abs/2007.12553">[paper]</a> <a href="https://github.com/chahuja/mix-stage">[code]</a> <a href="http://chahuja.com/pats">[dataset website]</a> <a href="https://github.com/chahuja/pats">[dataset repo]</a></h2>
+    
+    <h1>Videos</h1>
+    <h2 style="text-align:center">Teaser</h2>
+    <center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xltrwH6sMC8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </center>
+
     <h1> Demo </h1>
     <p> <b> Navigating this demo:</b> The top left represents the style space of all the speakers in our pretrained model. 
       On the top right you will view can view the videos for both <b>Style Transfer</b> and <b>Style Preservation</b>. 
@@ -354,9 +364,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -851,9 +861,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -1360,9 +1370,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -1869,9 +1879,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -2365,9 +2375,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -2874,9 +2884,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -3383,9 +3393,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -3892,9 +3902,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
@@ -4401,9 +4411,9 @@ window.addEventListener('DOMContentLoaded', onLoad);
 
 /**
  * @typedef {{
- *   substitutions: (Array<string>|undefined),
- *   attrs: (Object<function(Node, string):boolean>|undefined),
- *   tags: (Array<string>|undefined),
+ *   substitutions: (!Array<string>|undefined),
+ *   attrs: (!Array<string>|undefined),
+ *   tags: (!Array<string>|undefined),
  * }}
  */
 /* #export */ let SanitizeInnerHtmlOpts;
