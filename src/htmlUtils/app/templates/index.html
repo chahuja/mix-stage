@@ -1,0 +1,21 @@
+<body>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  width: 100%;
+  margin-left: auto; 
+  margin-right: auto;
+}
+    
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+{% for name in filenames %}
+    {% include name %}
+{% endfor %}
+    
+</body>

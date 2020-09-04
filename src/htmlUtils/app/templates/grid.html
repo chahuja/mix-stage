@@ -1,0 +1,24 @@
+<h1><u>{{ h1 }}</u></h1>
+<h3>{{ h2 }}</h3> 
+<table>
+    <tbody>
+        {% for name in names %}
+            <tr>
+            {% for col in columns %}
+                {% if 'mp4' in name[col] %}
+                   <td align="center"><video width="300" controls>
+                    <source src="{{ name[col] }}" type="video/mp4">
+                   </video></td>
+                {% elif '0' in name[col] %}
+                <td align="center"> <b>Content \ Style</b> </td>
+                {% elif '1' in name[col] %}
+                    <td align="center"> <h2>Speaker \ Model</h2> </td>
+                {% else %}
+                    <td align="center"> {{ name[col] }} </td>
+                {% endif %}
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr>

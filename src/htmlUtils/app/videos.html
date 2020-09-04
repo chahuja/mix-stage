@@ -1,0 +1,445 @@
+<body>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  width: 100%;
+  margin-left: auto; 
+  margin-right: auto;
+}
+    
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+
+    <h1 align="center">Appendix B</h1>
+
+    <h1><u>Style Transfer (Videos of Figure 7)</u></h1>
+<h3>We demostrate style transfer at an attribute level and speaker level in the following content-style grids. Each column of the following grids represent the same style but for different input speakers/attributes, while each row represents a snippet from the same speaker but in different styles. Hence, videos on the diagonal of the grid will have the same gesture style as the original speaker/attribute. (Please note that the head motion is from the ground truth as we do train our models to predict them.)</h3> 
+
+    <h1><u>B1. Body Orientation Style</u></h1>
+<h3>One speaker faces left direction and the other faces right</h3> 
+<table>
+    <tbody>
+        
+            <tr>
+            
+                
+                <td align="center"> <img src="files/content_style.png"> </td>
+                
+            
+                
+                    <td align="center"> chemistry <br><b>Towards Right</b> </td>
+                
+            
+                
+                    <td align="center"> lec_evol<br><b>Towards Left</b> </td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> chemistry <br><b>Towards Right</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_orientation/render_eval/test/chemistry/113483.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_orientation/render_eval_style/test/chemistry/113483.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> lec_evol<br><b>Towards Left</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_orientation/render_eval_style/test/lec_evol/0000022599.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_orientation/render_eval/test/lec_evol/0000022599.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+    </tbody>
+</table>
+<hr>
+
+    <h1><u>B2. Primary Arm Style</u></h1>
+<h3>One speaker uses their left arm and the other uses their right. (PS: We augmented the data of one speaker to move only one arm and keep the other one static.)</h3> 
+<table>
+    <tbody>
+        
+            <tr>
+            
+                
+                <td align="center"> <img src="files/content_style.png"> </td>
+                
+            
+                
+                    <td align="center"> <b>Right Arm</b> </td>
+                
+            
+                
+                    <td align="center"> <b>Left Arm</b> </td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> <b>Right Arm</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_primary_arm/render_eval/test/lec_cosmic|leftarm/0000006491|leftarm.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_primary_arm/render_eval_style/test/lec_cosmic|leftarm/0000006491|leftarm.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> <b>Left Arm</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_primary_arm/render_eval_style/test/lec_cosmic|rightarm/0000006491|rightarm.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_primary_arm/render_eval/test/lec_cosmic|rightarm/0000006491|rightarm.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+    </tbody>
+</table>
+<hr>
+
+    <h1><u>B3. Sitting vs. Standing Style</u></h1>
+<h3>One speaker is sitting while the other one is standing</h3> 
+<table>
+    <tbody>
+        
+            <tr>
+            
+                
+                <td align="center"> <img src="files/content_style.png"> </td>
+                
+            
+                
+                    <td align="center"> noah<br><b>Sitting</b> </td>
+                
+            
+                
+                    <td align="center"> maher<br><b>Standing</b> </td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> noah<br><b>Sitting</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_sitting vs standing/render_eval/test/noah/0000041966.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_sitting vs standing/render_eval_style/test/noah/0000041966.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> maher<br><b>Standing</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_sitting vs standing/render_eval_style/test/maher/0000001604.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_sitting vs standing/render_eval/test/maher/0000001604.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+    </tbody>
+</table>
+<hr>
+
+    <h1><u>B4. Gesture Frequency</u></h1>
+<h3>One speaker has a larger frequency of gesturing than the other</h3> 
+<table>
+    <tbody>
+        
+            <tr>
+            
+                
+                <td align="center"> <img src="files/content_style.png"> </td>
+                
+            
+                
+                    <td align="center"> seth<br><b>Low Frequency</b> </td>
+                
+            
+                
+                    <td align="center"> oliver<br><b>High Frequency</b> </td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> seth<br><b>Low Frequency</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_gesture_frequency/render_eval/test/seth/100218.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_gesture_frequency/render_eval_style/test/seth/100218.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> oliver<br><b>High Frequency</b> </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_gesture_frequency/render_eval_style/test/oliver/101092.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_gesture_frequency/render_eval/test/oliver/101092.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+    </tbody>
+</table>
+<hr>
+
+    <h1><u>B5. 4-Speaker Style Transfer</u></h1>
+<h3></h3> 
+<table>
+    <tbody>
+        
+            <tr>
+            
+                
+                <td align="center"> <img src="files/content_style.png"> </td>
+                
+            
+                
+                    <td align="center"> corden </td>
+                
+            
+                
+                    <td align="center"> lec_cosmic </td>
+                
+            
+                
+                    <td align="center"> ytch_prof </td>
+                
+            
+                
+                    <td align="center"> oliver </td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> corden </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval/test/corden/0000021307.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_corden_lec_cosmic/test/corden/0000021307.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_corden_ytch_prof/test/corden/0000021307.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_corden_oliver/test/corden/0000021307.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> lec_cosmic </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_lec_cosmic_corden/test/lec_cosmic/0000006491.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval/test/lec_cosmic/0000006491.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_lec_cosmic_ytch_prof/test/lec_cosmic/0000006491.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_lec_cosmic_oliver/test/lec_cosmic/0000006491.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> ytch_prof </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_ytch_prof_corden/test/ytch_prof/0000031849.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_ytch_prof_lec_cosmic/test/ytch_prof/0000031849.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval/test/ytch_prof/0000031849.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_ytch_prof_oliver/test/ytch_prof/0000031849.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+            <tr>
+            
+                
+                    <td align="center"> oliver </td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_oliver_corden/test/oliver/101086.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_oliver_lec_cosmic/test/oliver/101086.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval_oliver_ytch_prof/test/oliver/101086.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+                
+                   <td align="center"><video width="300" controls>
+                    <source src="files/mixstage_4/render_eval/test/oliver/101086.mp4" type="video/mp4">
+                   </video></td>
+                
+            
+            </tr>
+        
+    </tbody>
+</table>
+<hr>
+
+    
+</body>
