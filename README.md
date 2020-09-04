@@ -53,11 +53,7 @@ ln -s ../pycasper/pycasper .
 pip install -r requirements.txt
 ```
 
-requirements.txt is Coming Soon
-
 ## Training
-Model Lists - Coming soon
-
 To train a model from scratch, run the following script,
 
 ```sh
@@ -137,7 +133,7 @@ Every experiment multiple files with the same PREFIX:
 * PREFIX_histogram.json - Histogram of each generator in conditional Mix-GAN giving an idea about which set of generators were important for which style.
 
 ## Inception Score for pose sequences
-Coming soon
+To measure inception scores for pose sequences (or gestures), we refer you to the class [`InceptionScoreStyle`](src/evaluation/metrics.py#L305)
 
 # Issues
 All research has a tag of work in progress. If you find any issues with this code, feel free to raise issues or pull requests (even better) and I will get to it as soon as humanly possible.
