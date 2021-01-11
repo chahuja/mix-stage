@@ -139,5 +139,12 @@ Every experiment multiple files with the same PREFIX:
 ## Inception Score for pose sequences
 To measure inception scores for pose sequences (or gestures), we refer you to the class [`InceptionScoreStyle`](src/evaluation/metrics.py#L305)
 
+## Other cool stuff
+If you enjoyed this work, I would recommend the following projects which study different axes of nonverbal grounding,
+- [AISLe](https://github.com/chahuja/aisle)
+- [Language2Pose](http://chahuja.com/language2pose)
+- [Dialogue2Pose](https://arxiv.org/pdf/1910.02181.pdf)
+
+
 # Issues
 All research has a tag of work in progress. If you find any issues with this code, feel free to raise issues or pull requests (even better) and I will get to it as soon as humanly possible.
