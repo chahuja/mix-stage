@@ -106,8 +106,18 @@ python sample.py \
 -path2data ../data ## path to data
 ```
 
-### Pre-trained models
-Coming soon
+### Pre-trained models (UPDATE : March 17, 2021)
+Download pretrained models [here](https://cmu.box.com/s/gw9i4qvj2vykcq3krkkvq6nickb4chem) and unzip them in the `src` folder. All the pretrained models can be found in the `save/pretrained_models`. For the multi-speaker scenario in Table 1 and part of Table 2 of the paper, look look for the weights in `save/pretrained_models/multi-speaker`. For the attribute level training, look for the weights in `save/pretrained_models/attribute`.
+
+An example of sampling gesture animations from a pretrained model:
+
+```sh
+python sample.py \
+-load save/pretrained_models/multi-speaker/exp_3659_cpk_JointLateClusterSoftStyle4_G_speaker_\[\'corden\',\ \'lec_cosmic\'\]_model_JointLateClusterSoftStyle4_G_note_s2g_gst_mixgan15_weights.p \
+-path2data ../data
+```
+
+We also release a script to extract the reported results from the pretrained models in `eccv2020-results.ipynb` which requires the latest version of `pycasper`.
 
 ## Rendering
 
