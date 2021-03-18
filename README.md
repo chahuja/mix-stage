@@ -4,8 +4,20 @@ This is the official repository for the paper *Style Transfer for Co-Speech Gest
 
 [Chaitanya Ahuja](http://chahuja.com), Dong Won Lee, [Yukiko Nakano](http://www.ci.seikei.ac.jp/nakano/index_e.html), [Louis-Philippe Morency](https://www.cs.cmu.edu/~morency/) - [ECCV2020](https://eccv2020.eu/)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Links: [Paper](https://arxiv.org/abs/2007.12553), [Demo+Project Website](http://chahuja.com/mix-stage), [Dataset Website](http://chahuja.com/pats)
+
+Bibtex:
+
+```sh
+@inproceedings{ahuja2020style,
+  title={Style Transfer for Co-Speech Gesture Animation: A Multi-Speaker Conditional-Mixture Approach},
+  author={Ahuja, Chaitanya and Lee, Dong Won and Nakano, Yukiko I and Morency, Louis-Philippe},
+  booktitle={European Conference on Computer Vision},
+  year={2020}
+}
+```
 
 # Overview
 
