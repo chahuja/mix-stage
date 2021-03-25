@@ -119,7 +119,15 @@ python sample.py \
 ```
 
 ### Pre-trained models (UPDATE : March 17, 2021)
-Download pretrained models [here](https://cmu.box.com/s/gw9i4qvj2vykcq3krkkvq6nickb4chem) and unzip them in the `src` folder. All the pretrained models can be found in the `save/pretrained_models`. For the multi-speaker scenario in Table 1 and part of Table 2 of the paper, look look for the weights in `save/pretrained_models/multi-speaker`. For the attribute level training, look for the weights in `save/pretrained_models/attribute`.
+Download pretrained models and unzip them in the `src` folder. 
+
+```sh
+cd mix-stage/src
+wget -O pretrained.zip https://cmu.box.com/shared/static/gw9i4qvj2vykcq3krkkvq6nickb4chem.zip
+unzip pretrained.zip
+```
+
+Once you unzip them, all the pretrained models can be found in the `save/pretrained_models`. For the multi-speaker scenario in Table 1 and part of Table 2 of the paper, look look for the weights in `save/pretrained_models/multi-speaker`. For the attribute level training, look for the weights in `save/pretrained_models/attribute`.
 
 An example of sampling gesture animations from a pretrained model:
 
