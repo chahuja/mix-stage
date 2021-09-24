@@ -54,9 +54,12 @@ git clone -b master --single-branch https://github.com/chahuja/mix-stage.git
 * pycasper
 
 ```sh
+cd mix-stage
 mkdir ../pycasper
 git clone https://github.com/chahuja/pycasper ../pycasper
-ln -s ../pycasper/pycasper .
+
+cd src
+ln -s ../../pycasper/pycasper .  ## create a symlink
 ```
 
 * Create an [anaconda](https://www.anaconda.com/) or a virtual enviroment and activate it
