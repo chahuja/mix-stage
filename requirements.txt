@@ -6,7 +6,7 @@ argunparse==0.1.2
 librosa==0.7.2
 joblib==0.14.0
 transformers==2.5.1
-numpy==1.20
+numpy==1.21
 gensim==3.8.0
 prettytable==0.7.2
 nltk==3.4.5
