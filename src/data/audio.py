@@ -9,30 +9,33 @@ python data/audio.py -path2data ../dataset/groot/data -path2outdata ../dataset/g
 
 import os
 import sys
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+import pdb
+import warnings
 from pathlib import Path
+
+import librosa
 import numpy as np
 import pandas as pd
-import pdb
-from tqdm import tqdm
-import librosa
-import warnings
-from joblib import Parallel, delayed
 import webrtcvad
-
 from argsUtils import *
-from common import Modality, MissingData
+from joblib import Parallel, delayed
+from tqdm import tqdm
+
+from common import MissingData, Modality
+
 
 class Audio(Modality):
-  def __init__(self, path2data='../dataset/groot/data',
-               path2outdata='../dataset/groot/data',
+  def __init__(self, path2data='../5min_wav',
+               path2outdata='../preprocessed/5min',
                speaker='all',
                preprocess_methods=['log_mel_512']):
     super(Audio, self).__init__(path2data=path2data)
     self.path2data = path2data
-    self.df = pd.read_csv(Path(self.path2data)/'cmu_intervals_df.csv', dtype=object)
+    self.df = pd.read_csv(Path(self.path2data)/'egocom_cmu_intervals_df.csv', dtype=object)
     self.df.loc[:, 'delta_time'] = self.df['delta_time'].apply(float)
     self.df.loc[:, 'interval_id'] = self.df['interval_id'].apply(str)
     
@@ -40,7 +43,7 @@ class Audio(Modality):
     self.speaker = speaker
     self.preprocess_methods = preprocess_methods
 
-    self.missing = MissingData(self.path2data)
+    #self.missing = MissingData(self.path2data)
     
   def preprocess(self):
     if self.speaker[0] != 'all':
@@ -56,7 +59,7 @@ class Audio(Modality):
       ## find path to processed files
       parent = Path(self.path2data)/'raw'/'{}_cropped'.format(speaker)
       filenames = os.listdir(parent)
-      filenames = [filename for filename in filenames if filename.split('.')[-1] == 'mp3']
+      filenames = [filename for filename in filenames if filename.split('.')[-1] == 'wav']
       filename_dict = {filename.split('.')[0].split('_')[-1]: filename for filename in filenames}
       #self.save_intervals(interval_ids[0], speaker, filename_dict, parent)
       #pdb.set_trace()
@@ -64,10 +67,11 @@ class Audio(Modality):
       # for interval_id in tqdm(interval_ids, desc='intervals'):
       #   missing_data_list.append(self.save_intervals(interval_id, speaker, filename_dict, parent))
       # pdb.set_trace()
-      missing_data_list = Parallel(n_jobs=-1)(delayed(self.save_intervals)(interval_id, speaker,
+      # missing: n/a 
+      #missing_data_list = Parallel(n_jobs=-1)(delayed(self.save_intervals)(interval_id, speaker,
                                                                            filename_dict, parent)
                                               for interval_id in tqdm(interval_ids, desc='intervals'))
-      self.missing.save_intervals(missing_data_list)
+      #self.missing.save_intervals(missing_data_list)
 
   def save_intervals(self, interval_id, speaker, filename_dict, parent):
     if interval_id in filename_dict:
