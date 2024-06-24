@@ -178,6 +178,8 @@ If you enjoyed this work, I would recommend the following projects which study d
 - [Language2Pose](http://chahuja.com/language2pose)
 - [Dialogue2Pose](https://arxiv.org/pdf/1910.02181.pdf)
 
+## Other Repositories
+To run speech2gesture baseline on Windows checkout [jgai284's repository](https://github.com/jgai284/P4P-Speech2Gesture). They have worked out some of the kinks and pitfalls so that you may not have to.
 
 # Issues
 All research has a tag of work in progress. If you find any issues with this code, feel free to raise issues or pull requests (even better) and I will get to it as soon as humanly possible.
